@@ -27,3 +27,10 @@ $ rospack depends1 rospy
 7) VIEW NESTED DEPENDENCIES
 Recursively determine all nested dependencies
 $ rospack depends beginner_tutorials
+
+8)exec_depend tag:
+We want all of our specified dependencies to also be available at run time. Eg:
+<exec_depend>roscpp</exec_depend>
+<exec_depend>rospy</exec_depend>
+<exec_depend>std_msgs</exec_depend>
+
