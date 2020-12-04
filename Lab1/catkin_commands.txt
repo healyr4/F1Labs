@@ -1,3 +1,4 @@
+Prew: Getting tilde: Ctr+shift+u then 7E (umlaut7E is unicode for tilde)
 1)CREATE PACKAGE
 Create a new package called 'beginner_tutorials' 
 Dependencies: std_msgs, roscpp, and rospy: 
@@ -34,3 +35,15 @@ We want all of our specified dependencies to also be available at run time. Eg:
 <exec_depend>rospy</exec_depend>
 <exec_depend>std_msgs</exec_depend>
 
+9) MAKE FILE EXECUTABLE
+$ chmod +x [filename]
+
+10) ROSED
+Type SHIFT Z Z to save and exit. Type SHIFT Z Q to exit without saving.
+$ rosed [package] [filename]
+
+11) Add Fn to CMakeList.txt:
+This makes sure the python script gets installed properly, and uses the right python interpreter: 
+catkin_install_python(PROGRAMS scripts/talker.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
