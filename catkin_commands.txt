@@ -1,7 +1,29 @@
 1)CREATE PACKAGE
-Create a new package called 'beginner_tutorials' which depends on std_msgs, roscpp, and rospy: 
+Create a new package called 'beginner_tutorials' 
+Dependencies: std_msgs, roscpp, and rospy: 
 C++ and Python implementations of Ros
-create a beginner_tutorials folder which contains a package.xml and a CMakeLists.txt,
---->catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
+Creates a beginner_tutorials folder which contains a package.xml and a CMakeLists.txt,
+$ catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
 
-2)
+2)BUILD PACKAGES IN WORKSPACE
+$ catkin_make
+
+3)SOURCE SETUP FILE
+To add the workspace to your ROS environment you need to source the generated setup file
+$ . ~/catkin_ws/devel/setup.bash
+
+4) VIEW PACKAGE DEPENDENCIES
+(stored in package.xml file)
+eg. for begineer_tutorials
+$ rospack depends1 beginner_tutorials 
+
+5) CD INTO PACKAGE
+$ roscd beginner_tutorials
+
+6) VIEW DEPENDENCIE'S DEPENDECIES
+eg. for rospy
+$ rospack depends1 rospy
+
+7) VIEW NESTED DEPENDENCIES
+Recursively determine all nested dependencies
+$ rospack depends beginner_tutorials
