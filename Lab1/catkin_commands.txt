@@ -47,3 +47,5 @@ This makes sure the python script gets installed properly, and uses the right py
 catkin_install_python(PROGRAMS scripts/talker.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+12)
