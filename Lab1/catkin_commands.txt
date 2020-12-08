@@ -57,3 +57,13 @@ $ rostopic  list
 14)See what's being published on topic
 Eg. on scan
 $ rostopic  echo /scan
+
+15) Get message type of topic:
+$ rostopic  echo /[topic]
+
+16) Get fileds/primitive types of message:
+Eg for scan's message
+$ rosmsg  show  sensor_msgs/LaserScan
+
+17) Print out messages using:
+ROS_INFO_STREAM ()
