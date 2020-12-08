@@ -15,6 +15,7 @@ def listener():
     # run simultaneously.
     rospy.init_node('listener', anonymous=True)
 
+    #Subscrib to the chatter topic which is of type std_msgs.msgs.String. 
     rospy.Subscriber('chatter', String, callback)
 
     # spin() simply keeps python from exiting until this node is stopped
