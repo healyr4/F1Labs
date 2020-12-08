@@ -2,7 +2,6 @@
 #1st line ensures script is executed as a Python script
 #Every Python ROS Node will have this declaration at the top
 
-# license removed for brevity
 
 ## Simple talker demo that published std_msgs/Strings messages
 ## to the 'chatter' topic
