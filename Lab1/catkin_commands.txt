@@ -48,4 +48,12 @@ catkin_install_python(PROGRAMS scripts/talker.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
-12)
+12) Launch f110 Simulator:
+$ roslaunch  f110_simulator  simulator.launc
+
+13)Get list of all active topics
+$ rostopic  list
+
+14)See what's being published on topic
+Eg. on scan
+$ rostopic  echo /scan
